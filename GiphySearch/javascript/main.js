@@ -16,7 +16,7 @@ textBox.addEventListener('keyup', function(e){
     let div = document.querySelector('.js-container');
     div.innerHTML = "";
     if (e.which===13){
-    	let url = `https://api.giphy.com/v1/gifs/search?api_key=27TVNGfluDKjlqKxvqU6yZDBDRgEflmo&q=${input}`;;
+    	let url = `https://api.giphy.com/v1/gifs/search?api_key='API KEY'&q=${input}`;;
          pushToDOM(url);    }
     
     
@@ -31,7 +31,7 @@ function pushToDOM(url){
 
 	GiphyAJAXCall.addEventListener('load', function(e) {
 
-	// your callback events go here 
+	
 	let data = e.target.response;
 	let response = JSON.parse(data);
 	let imges = response.data;
